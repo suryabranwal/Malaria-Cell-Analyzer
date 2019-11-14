@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Malaria Detection</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+    <script src="form.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/image" method="post" > {% csrf_token %}
+			<h1 style="text-align:center;">Malaria Cell Analyzer </h1>
+			<div id="form-main">
+
+				<div id="form-div">
+					<h2>Insert an cell image for analysis :</h2>
+					<form class="montform" id="reused_form" enctype=&quot;multipart/form-data&quot;>
+
+						<p class="file">
+							<input name="image" type="file" id="file" class="feedback-input" accept="image/*">
+						</p>
+						<div class="submit">
+							<button type="submit" class="button-blue">SUBMIT</button>
+							<div class="ease"></div>
+						</div>
+					</form>
+					<div id="error_message" style="width:100%; height:100%; display:none; ">
+						<h4>
+							Error
+						</h4>
+						Sorry there was an error sending your form.
+					</div>
+					<div id="success_message" style="width:100%; height:100%; display:none; ">
+						<h2>Success! Your Message was Sent Successfully.</h2>
+					</div>
+				</div>
+			</div>
+		</form>
+    </div>
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
