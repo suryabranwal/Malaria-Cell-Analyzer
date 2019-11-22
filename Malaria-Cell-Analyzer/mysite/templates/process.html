@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <p class="card-text">Here you will process your uploaded cell image and also analyse it.</p>
+   <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <button >Process Image</button>
+
+  </form>
+
+{% endblock %}
